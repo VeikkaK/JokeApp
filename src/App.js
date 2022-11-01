@@ -1,23 +1,18 @@
-import logo from './logo.svg';
 import './App.css';
+import useFetch from './components/useFetch';
+import banner from '../src/banner.jpg';
 
 function App() {
+  const { data, loading, error, Generate } = useFetch(
+    "https://v2.jokeapi.dev/joke/Any");
+
+  if (loading) return <h1>LOADING...</h1>;
+  if (error) console.log(error);
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1>{data?.setup} : {data?.delivery}</h1>
+      <button className="button" onClick={Generate}> Generate</button>
+      <img src={banner} alt="logo" width="500" height="300"/>
     </div>
   );
 }
