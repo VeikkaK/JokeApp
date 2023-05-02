@@ -1,4 +1,4 @@
-This is a React-based web application that allows users to retrieve and display jokes from an API. It uses an API key for authentication.
+This is my React-based web application that allows users to retrieve and display jokes from an API. It uses an API key for authentication.
 
 To run the Joke Application locally, please follow these steps:
 
