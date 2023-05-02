@@ -11,7 +11,7 @@ To run the Joke Application locally, please follow these steps:
 3. Install the dependencies:
    npm install
 
-4. Create a `.env` file in the project's root directory and add your API key.
+4. Create a `.env` file in the project's root directory and add your API key:
    REACT_APP_API_KEY=your-api-key
 
 5. Start the application:
